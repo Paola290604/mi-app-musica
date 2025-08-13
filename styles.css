@@ -1,0 +1,99 @@
+/* 🎨 Estilos principales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f4f4;
+    color: #333;
+}
+
+/* 🔹 Encabezado */
+header {
+    background: #6200ea;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* 🔹 Navegación inferior */
+nav {
+    position: fixed;
+    bottom: 80px;
+    left: 0;
+    right: 0;
+    background: #6200ea;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+nav button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+}
+
+/* 🔹 Secciones */
+.page {
+    display: none;
+    padding: 15px;
+}
+.page.active {
+    display: block;
+}
+
+/* 🔹 Lista de canciones */
+.song-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+}
+.song-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.song-card:hover {
+    transform: scale(1.05);
+}
+.song-card img {
+    width: 100%;
+}
+.song-info {
+    padding: 5px;
+}
+
+/* 🔹 Reproductor */
+#player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+#player img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+.controls button {
+    font-size: 18px;
+}
+
+/* 🔹 Modo oscuro */
+body.dark {
+    background: #121212;
+    color: white;
+}
+body.dark header, body.dark nav {
+    background: #333;
+}
+body.dark .song-card {
+    background: #1e1e1e;
+}
